@@ -1,0 +1,15 @@
+{
+    "name": "typescript-lambda-example",
+    "scripts": {
+        "build": "tsc",
+        "build:watch": "tsc -w",
+        "deploy": "npm run build && sls deploy"
+    },
+    "devDependencies": {
+        "@types/aws-lambda": "^8.10.31",
+        "@types/node": "^12.7.4",
+        "serverless-offline": "^5.10.1",
+        "tslint": "^5.19.0",
+        "typescript": "^3.6.2"
+    }
+}

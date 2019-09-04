@@ -1,0 +1,19 @@
+service: hello-typescript
+
+plugins:
+  # - serverless-dynamodb-local
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+
+functions:
+  hello:
+    handler: dist/hello.handler
+    events:
+      - http:
+          path: /
+          method: GET
+          cors: true
